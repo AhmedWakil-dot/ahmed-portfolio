@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -579,4 +579,3 @@ body.dark-mode .skills-card:hover {
     transition: all 0.3s ease; /* Added transition for smooth focus */
 }
 
-.input-box
