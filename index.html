@@ -3,73 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Ahmed Wakil - Web Developer CV</title>
-    <style>
-        
-        #profile-picture {
-            width: 150px;
-            height: 150px; 
-            object-fit: cover;
-        
-            float: right;
-            
-            margin-bottom: 20px;
-        }
-
-        
-        header {
-            overflow: auto; 
-            padding-bottom: 20px; 
-        }
-
-        h1, h2 {
-            margin: 0; 
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <img
-            id="profile-picture"
-            src="https://cdn.prgloo.com/media/a19f6c5e09ed4a57a074373b704addb1.jpg?width=1320&height=1980"
-            alt="Professional headshot of Ahmed Wakil"
-        >
-        <h1>Ahmed Wakil</h1>
-        <h2>Web Developer & Data Analyser</h2>
-    </header>
-
-    <hr>
-
-    <section id="about-me">
-        <h3>About Me</h3>
-        <p>
-            I am a <strong>passionate web developer</strong> and a <strong>Business Management with Innovation and Technology</strong> student at the <strong>University of Salford</strong> in Manchester. I have a strong foundation in <strong>HTML, CSS, and JavaScript</strong>, alongside <strong>vast knowledge in data analysis and Python</strong>. I am currently focused on mastering front-end development and aim to become a <strong>Full Stack Developer</strong>.
-        </p>
-
-        <h4>Key Skills:</h4>
-        <ul>
-            <li><strong>Front-End:</strong> HTML, CSS, JavaScript</li>
-            <li><strong>Data/Back-End:</strong> Python, Data Analysis</li>
-            <li><strong>Education:</strong> Business Management with Innovation and Technology</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <section id="contact-links">
-        <h3>Connect with Me</h3>
-        <div>
-            <a href="hello.html">Portfolio</a> |
-            <a href="https://www.instagram.com/qt1ps_wakil/" target="_blank" rel="noopener noreferrer">Instagram Profile</a> |
-            <a href="about.html">Contact Form</a>
-        </div>
-    </section>
-
-</body>
-</html>
-=======
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <title>Ahmed Wakil - Web Developer Portfolio</title>
@@ -129,7 +62,7 @@
 <!-- about section code-->
 <section class="about" id="about">
     <div class="about-content animate">
-        <h2 class ="heading animate">About <span>Me</span></h2>
+        <h2 class ="heading animate">about <span>Me</span></h2>
         <h3>i'm a <span>Frontend Developer</span></h3>
         <p>I am a motivated and results-oriented Business Management with Innovation and Technology student with a passion for transforming commercial challenges into effective digital solutions. While I am grounded in strong business strategy and data analysis, I possess practical expertise in front-end development (HTML, CSS, JavaScript) and back-end logic with Python. I thrive in collaborative environments, and my professional experience—from securing strategic corporate partnerships to managing complex installations—shows my commitment to successful execution. I am constantly eager to learn and ready to leverage both my technical and business acumen on impactful web development projects.</p>
         <a href="https://docs.google.com/document/d/e/2PACX-1vREWfeM7oUBdTcb-3kfvCMn-SMsVOJGtu0fI4PybgbnXmwhoXu8k1PXtevl4__1mg/pub" class="btn">Download CV</a>
@@ -185,11 +118,12 @@
 </section>
 
 
-<!-- SECTION: Problem Solving (Now contains the CTO Case Study) -->
+<!-- SECTION: Problem Solving (Now contains the CTO Case Study & Interactive Menu) -->
 <section class="problemsolving" id="problemsolving">
     <h2 class="heading animate">Problem <span>Solving</span></h2>
 
     <div class="problemsolving-container animate">
+        
         <!-- CTO Introduction and Digital Transformation Goals (Assessment Content) -->
         <div class="cto-case-study">
             <p>As the **Chief Technology Officer (CTO)** of "Rhythm & Feast," a local restaurant specializing in music genre-themed cuisine, my goal is to execute a digital transformation centered on enhancing the unique customer experience.
@@ -202,6 +136,41 @@
                 <li>**Streamline Bookings & Service:** Replace manual booking and inquiry methods with a self-service interactive form, ensuring all critical customer data (date, time, party size) is captured accurately and immediately communicated to staff via email.</li>
                 <li>**Modernize Communication & Local Presence:** Establish a professional, central digital hub that links seamlessly to social media and provides crucial location/contact information, strengthening local trust and accessibility.</li>
             </ul>
+            <h3 class="sub-heading" style="margin-top: 4rem;">Interactive Prototype: Music-Inspired Menu</h3>
+            <p>This prototype demonstrates the "Thematic Experience" goal by showcasing how a genre-based menu could be presented with engaging visuals and hover effects.</p>
+        </div>
+
+        <!-- NEW: Interactive Menu Component -->
+        <div class="menu-interactive">
+            
+            <div class="menu-item-card">
+                <i class='bx bx-music' ></i>
+                <h4>Classical Overture</h4>
+                <p>Delicate French Onion Soup. Elegant and timeless. (Mood: Orchestral)</p>
+                <span class="price">£8.50</span>
+            </div>
+            
+            <div class="menu-item-card">
+                <i class='bx bx-microphone'></i>
+                <h4>Hip Hop Fusion</h4>
+                <p>Spicy Korean BBQ Tacos with a lime kick. Bold and complex. (Mood: Street Style)</p>
+                <span class="price">£14.99</span>
+            </div>
+            
+            <div class="menu-item-card">
+                <i class='bx bx-volume-full'></i>
+                <h4>Rock Anthem Platter</h4>
+                <p>Bourbon-glazed Chili Ribs served with a heavy side of smoked beans. (Mood: Hard & Heavy)</p>
+                <span class="price">£21.00</span>
+            </div>
+            
+            <div class="menu-item-card">
+                <i class='bx bx-headphone'></i>
+                <h4>Jazz Riff Dessert</h4>
+                <p>Warm Chocolate Lava Cake with cool vanilla bean ice cream. Smooth and improvised. (Mood: Velvet Smooth)</p>
+                <span class="price">£9.25</span>
+            </div>
+            
         </div>
     </div>
 </section>
@@ -423,4 +392,3 @@
 
 </body>
 </html>
->>>>>>> cfea6881bacc04cc0fe2f22a71161fe44ac05849
