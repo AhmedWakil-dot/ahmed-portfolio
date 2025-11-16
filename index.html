@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Ahmed Wakil - Web Developer CV</title>
+    <style>
+        
+        #profile-picture {
+            width: 150px;
+            height: 150px; 
+            object-fit: cover;
+        
+            float: right;
+            
+            margin-bottom: 20px;
+        }
+
+        
+        header {
+            overflow: auto; 
+            padding-bottom: 20px; 
+        }
+
+        h1, h2 {
+            margin: 0; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img
+            id="profile-picture"
+            src="https://cdn.prgloo.com/media/a19f6c5e09ed4a57a074373b704addb1.jpg?width=1320&height=1980"
+            alt="Professional headshot of Ahmed Wakil"
+        >
+        <h1>Ahmed Wakil</h1>
+        <h2>Web Developer & Data Analyser</h2>
+    </header>
+
+    <hr>
+
+    <section id="about-me">
+        <h3>About Me</h3>
+        <p>
+            I am a <strong>passionate web developer</strong> and a <strong>Business Management with Innovation and Technology</strong> student at the <strong>University of Salford</strong> in Manchester. I have a strong foundation in <strong>HTML, CSS, and JavaScript</strong>, alongside <strong>vast knowledge in data analysis and Python</strong>. I am currently focused on mastering front-end development and aim to become a <strong>Full Stack Developer</strong>.
+        </p>
+
+        <h4>Key Skills:</h4>
+        <ul>
+            <li><strong>Front-End:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Data/Back-End:</strong> Python, Data Analysis</li>
+            <li><strong>Education:</strong> Business Management with Innovation and Technology</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="contact-links">
+        <h3>Connect with Me</h3>
+        <div>
+            <a href="hello.html">Portfolio</a> |
+            <a href="https://www.instagram.com/qt1ps_wakil/" target="_blank" rel="noopener noreferrer">Instagram Profile</a> |
+            <a href="about.html">Contact Form</a>
+        </div>
+    </section>
+
+</body>
+</html>
+=======
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ahmed Wakil - Web Developer Portfolio</title>
+</head>
+<body>
+
+<!-- Header section -->
+<header class="header">
+    <a href="#home" class="logo">Ahmed Wakil</a>
+
+    <!-- MENU TOGGLE ICON (Used on Mobile) -->
+    <i class='bx bx-menu' id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#problemsolving">Problem Solving</a>
+        <a href="#contact">Contact</a>
+        
+        <!-- DARK MODE TOGGLE BUTTON ADDED HERE -->
+        <i class='bx bx-moon' id="theme-toggle"></i>
+    </nav>
+</header>
+
+<!--home section code (Home section animations are already handled by keyframes)-->
+<section class="home" id="home">
+    <div class="home-img">
+        <img src="images/me.JPG" alt="profile image">
+    </div>
+
+    <div class="home-content">
+        <h3>Hello, I'm</h3>
+        <h1>Ahmed Wakil</h1>
+        <!-- UPDATED: Text cycling happens inside the span via JS -->
+        <h3>And I'm a <span id="role-text" class="typing"></span></h3>
+        <p>
+            Welcome to my portfolio website! I'm a passionate web developer with a knack for creating 
+            dynamic and responsive web applications. Explore my skills, projects, and get in touch!
+        </p>
+
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/ahmed-wakil-890777330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/AhmedWakil-dot">
+                <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.instagram.com/wwakil_fr/?utm_source=ig_web_button_share_sheet">
+                <i class='bx bxl-instagram'></i>
+            </a>
+        </div>
+        <a href="https://docs.google.com/document/d/e/2PACX-1vREWfeM7oUBdTcb-3kfvCMn-SMsVOJGtu0fI4PybgbnXmwhoXu8k1PXtevl4__1mg/pub" class="btn">Download CV</a>
+    </div>
+</section>
+
+<!-- about section code-->
+<section class="about" id="about">
+    <div class="about-content animate">
+        <h2 class ="heading animate">About <span>Me</span></h2>
+        <h3>i'm a <span>Frontend Developer</span></h3>
+        <p>I am a motivated and results-oriented Business Management with Innovation and Technology student with a passion for transforming commercial challenges into effective digital solutions. While I am grounded in strong business strategy and data analysis, I possess practical expertise in front-end development (HTML, CSS, JavaScript) and back-end logic with Python. I thrive in collaborative environments, and my professional experience—from securing strategic corporate partnerships to managing complex installations—shows my commitment to successful execution. I am constantly eager to learn and ready to leverage both my technical and business acumen on impactful web development projects.</p>
+        <a href="https://docs.google.com/document/d/e/2PACX-1vREWfeM7oUBdTcb-3kfvCMn-SMsVOJGtu0fI4PybgbnXmwhoXu8k1PXtevl4__1mg/pub" class="btn">Download CV</a>
+    </div>
+    <div class="about-img animate">
+        <img src="images/me.JPG" alt="about image"> 
+    </div>
+
+</section>
+
+<!-- SECTION: Skills (New Content from CV) -->
+<section class="skills" id="skills">
+    <h2 class="heading animate">My <span>Skills</span></h2>
+    <div class="skills-container animate">
+        
+        <div class="skills-card">
+            <i class='bx bxs-group'></i>
+            <h3>Communication</h3>
+            <ul>
+                <li>Successfully engaged with key corporate stakeholders and decision-makers, building relationships and tailoring presentations to highlight commercial value.</li>
+                <li>Secured business commitments by effectively communicating a clear, customised value proposition based on client-specific needs and market impact.</li>
+            </ul>
+        </div>
+        
+        <div class="skills-card">
+            <i class='bx bxs-user-account'></i>
+            <h3>Leadership</h3>
+            <ul>
+                <li>Led focused training initiatives to enhance team performance in advanced business developments and effective lead generation techniques.</li>
+                <li>Mentored colleagues on client engagement strategies, measurably increasing their capacity for successful, independent station installations.</li>
+            </ul>
+        </div>
+        
+        <div class="skills-card">
+            <i class='bx bx-laptop'></i>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Applied formal skills in **Data Analysis** acquired through L4 Business and IT coursework to inform and validate strategic recommendations.</li>
+                <li>Experienced in both **front-end development** (HTML, CSS, JavaScript) and **back-end coding** (Python), developed within the Business Intelligence module.</li>
+            </ul>
+        </div>
+
+        <div class="skills-card">
+            <i class='bx bx-brain'></i>
+            <h3>Problem Solving (Business Focus)</h3>
+            <ul>
+                <li>Overcame initial stakeholder scepticism by developing and presenting compelling, data-driven business cases to articulate the commercial benefits of charging infrastructure.</li>
+                <li>Secured multiple strategic installations across the hospitality sector (restaurants and hotels) by proactively addressing complex sales objections.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SECTION: Problem Solving (Now contains the CTO Case Study) -->
+<section class="problemsolving" id="problemsolving">
+    <h2 class="heading animate">Problem <span>Solving</span></h2>
+
+    <div class="problemsolving-container animate">
+        <!-- CTO Introduction and Digital Transformation Goals (Assessment Content) -->
+        <div class="cto-case-study">
+            <p>As the **Chief Technology Officer (CTO)** of "Rhythm & Feast," a local restaurant specializing in music genre-themed cuisine, my goal is to execute a digital transformation centered on enhancing the unique customer experience.
+            </p>
+            <h3 class="sub-heading">🎧 Digital Transformation Goals: Rhythm & Feast</h3>
+            <p>Our web-based solution aims to achieve three core goals:</p>
+
+            <ul>
+                <li>**Improve Customer Engagement (Thematic Experience):** Digitize our unique value proposition—connecting music and food—by making our special menu and concept immediately accessible and engaging online.</li>
+                <li>**Streamline Bookings & Service:** Replace manual booking and inquiry methods with a self-service interactive form, ensuring all critical customer data (date, time, party size) is captured accurately and immediately communicated to staff via email.</li>
+                <li>**Modernize Communication & Local Presence:** Establish a professional, central digital hub that links seamlessly to social media and provides crucial location/contact information, strengthening local trust and accessibility.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION: Contact (Assessment Required Elements) -->
+<section class="contact" id="contact">
+    <h2 class="heading animate">Book Your <span>Experience</span></h2>
+
+    <div class="contact-container animate">
+        
+        <!-- Assessment Required Elements START -->
+        <form action="mailto:rhythmandfeast@example.com?subject=New Reservation/Inquiry" method="POST" enctype="text/plain">
+            
+            <!-- Contact Details & Social Links -->
+            <div class="contact-details">
+                <h3>Contact Details & Socials:</h3>
+                <p>📞 **Phone:** (555) 123-4567 | 📧 **Email:** info@rhythmandfeast.com</p>
+                <p>📍 **Address:** 101 Rhythm Lane, Food City, CA 90210</p>
+                
+                <!-- Social Media Links (as requested) -->
+                <div class="social-media">
+                    <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
+                </div>
+                <hr>
+            </div>
+            
+            <!-- Interactive Booking Form -->
+            <div class="input-box">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email Address" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="number" name="Party Size" placeholder="Number of Guests" min="1" required>
+                <input type="date" name="Booking Date" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="time" name="Booking Time" required>
+            </div>
+
+            <textarea name="Message/Feedback" cols="30" rows="10" placeholder="Special Request or Feedback"></textarea>
+            
+            <!-- Form automatically generates email with user input (mailto) -->
+            <input type="submit" value="Send Booking/Inquiry" class="btn">
+        </form>
+
+        <!-- Map Display: Embedded map with external link button -->
+        <div class="map-container">
+            <h3 class="heading">Find Us</h3>
+            
+            <!-- Embedded Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250552726526!2d-122.41941558468165!3d37.77492997975936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806c9b9b0001%3A0x7d25e0a6d0d5b4e!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1636545123456!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <!-- External Link Button using existing .btn styling -->
+            <a href="https://www.google.com/maps/search/?api=1&query=101+Rhythm+Lane,+Food+City,+CA+90210" target="_blank" class="btn map-external-link">
+                View Full Map <i class='bx bx-map'></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p style="text-align: center; padding: 2rem; background: var(--secondary-color); color: var(--main-color); margin-top: 0;">&copy; 2025 Ahmed Wakil Portfolio</p>
+</footer>
+
+<!-- JAVASCRIPT FOR SCROLL ANIMATIONS, DARK MODE, AND TYPING EFFECT -->
+<script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+    const animatedElements = document.querySelectorAll('.animate');
+    const themeToggle = document.getElementById('theme-toggle');
+    const menuIcon = document.getElementById('menu-icon'); 
+    const navBar = document.querySelector('.navbar');       
+    const body = document.body;
+    
+    // --- TYPING ANIMATION LOGIC ---
+    const roles = ["Web Developer", "Frontend Developer", "Backend Developer"];
+    const roleElement = document.getElementById('role-text');
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 150;
+    let deletingSpeed = 75;
+    let delay = 2000;
+
+    function typeWriter() {
+        const currentRole = roles[roleIndex];
+
+        // START: Cursor visibility during typing/deleting
+        roleElement.classList.add('typing'); 
+
+        if (isDeleting) {
+            // Deleting text
+            roleElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = deletingSpeed;
+        } else {
+            // Typing text
+            roleElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 150;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            // Finished typing the current role, start idling/delay
+            typingSpeed = delay;
+            isDeleting = true;
+            // HIDE CURSOR during static display (idling)
+            roleElement.classList.remove('typing'); 
+
+        } else if (isDeleting && charIndex === 0) {
+            // Finished deleting, move to the next role
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typingSpeed = 300; // Small delay before typing the next word
+        }
+
+        setTimeout(typeWriter, typingSpeed);
+    }
+
+    // Start the typing animation once the page is loaded
+    document.addEventListener('DOMContentLoaded', typeWriter);
+
+    // --- Menu Toggle Logic ---
+    menuIcon.onclick = () => {
+        navBar.classList.toggle('active-nav');
+        menuIcon.classList.toggle('bx-x'); // Changes icon to 'X'
+    };
+
+    // Close menu when a navigation link is clicked (mobile experience improvement)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navBar.classList.contains('active-nav')) {
+                navBar.classList.remove('active-nav');
+                menuIcon.classList.remove('bx-x');
+            }
+        });
+    });
+
+    // --- DARK MODE LOGIC ---
+    const activateDarkMode = (enable) => {
+        if (enable) {
+            body.classList.add('dark-mode');
+            themeToggle.classList.replace('bx-moon', 'bx-sun');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            body.classList.remove('dark-mode');
+            themeToggle.classList.replace('bx-sun', 'bx-moon');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    };
+
+    // Load saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        activateDarkMode(true);
+    } else {
+        activateDarkMode(false);
+    }
+
+    // Toggle listener
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            activateDarkMode(false);
+        } else {
+            activateDarkMode(true);
+        }
+    });
+
+    // --- SCROLL ANIMATION LOGIC ---
+    const scrollHandler = () => {
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        // 1. Highlight active navigation link
+        sections.forEach(sec => {
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
+
+            if (top >= offset && top < offset + height) {
+                navLinks.forEach(links => {
+                    links.classList.remove('active');
+                });
+                // Assuming nav links use href="#id"
+                const activeLink = document.querySelector('.navbar a[href*=' + id + ']');
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+        
+        // 2. Animate elements on scroll (Show/Hide bi-directionally)
+        animatedElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+
+            // Condition to show: Element top is visible (above 85% of window height) AND 
+            // the element bottom has not passed completely over the top edge of the window.
+            if (rect.top <= windowHeight * 0.85 && rect.bottom >= 0) {
+                element.classList.add('show-animate');
+            } else {
+                // Condition to hide: Element is outside the viewport (above or below)
+                element.classList.remove('show-animate');
+            }
+        });
+    };
+
+    // Run on load and on scroll
+    window.addEventListener('scroll', scrollHandler);
+    window.addEventListener('load', scrollHandler);
+
+    // Initial check for elements already in view on page load
+    scrollHandler();
+
+</script>
+
+</body>
+</html>
+>>>>>>> cfea6881bacc04cc0fe2f22a71161fe44ac05849
