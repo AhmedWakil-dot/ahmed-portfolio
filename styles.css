@@ -16,6 +16,11 @@
     --main-color: #ffffff;    /* Primary White for containers/buttons/accents */
     --snd-bg-color: #e5e5e5;  /* Secondary light background (About, Contact) */
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* GLOBAL SUBTLE TEXTURE (Light Mode) */
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    animation: global-noise 100s linear infinite;
 }
 
 /* DARK MODE VARIABLES (Applied to body via JS) */
@@ -24,9 +29,18 @@ body.dark-mode {
     --snd-bg-color: #1e1e1e;  /* Slightly Lighter Dark background */
     --text-color: #f0f0f0;    /* Main white/light gray text */
     --main-color: #2c2c2c;    /* Dark container background */
+    
+    /* GLOBAL SUBTLE TEXTURE (Dark Mode) */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    animation: global-noise 100s linear infinite reverse;
 }
 
-/* --- New Global Animation Keyframes (Removed noise/particle keyframes) --- */
+/* --- New Global Animation Keyframes --- */
+@keyframes global-noise {
+    0% { background-position: 0 0; }
+    100% { background-position: 500px 500px; }
+}
 /* ------------------------------------- */
 
 section {
@@ -34,9 +48,16 @@ section {
     padding : 10rem 9% 2rem;
     /* Added perspective for 3D card animation */
     perspective: 1500px; 
-    position: relative; 
-    z-index: 1; 
+    position: relative; /* Required for the animated pseudo-element */
+    z-index: 1; /* Ensures content is above the animation */
 }
+
+/* --- ANIMATED BACKGROUND KEYFRAMES (Existing) --- */
+@keyframes particle-flow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+/* ------------------------------------- */
 
 /* --- SCROLL ANIMATION CLASSES --- */
 .animate {
@@ -538,16 +559,44 @@ body.dark-mode .project-card:hover {
 }
 
 
-/* Problem Solving Section (Removed custom background) */
+/* Problem Solving Section (Added Case Study Styling) */
 .problemsolving {
-    background: var(--bg-color); 
+    /* Unique dark, rich color base for the restaurant aesthetic */
+    background: #251a14; 
     padding-bottom: 5rem;
     overflow: hidden;
 }
 
-/* Remove animated backgrounds */
+/* --- ANIMATED BACKGROUND APPLICATION (Problem Solving - Restaurant Vibe) --- */
 #problemsolving::before {
-    content: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    /* 1. Rich dark texture (like plush fabric or wood grain) */
+    background: 
+        /* Subtle diagonal lines/texture */
+        repeating-linear-gradient(
+            45deg,
+            rgba(153, 102, 51, 0.1),
+            rgba(153, 102, 51, 0.1) 10px,
+            transparent 10px,
+            transparent 20px
+        ),
+        /* 2. Particle flow animation (layered on top) */
+        radial-gradient(circle, rgba(100, 170, 231, 0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(100, 170, 231, 0.08) 1px, transparent 1px);
+
+    background-size: 200% 200%, 50px 50px, 50px 50px;
+    background-position: 0 0, 0 0, 25px 25px;
+    
+    /* Animation for the particles and slight movement of the texture */
+    animation: particle-flow 60s linear infinite, global-noise 120s linear infinite reverse;
+    opacity: 0.9;
 }
 /* ----------------------------- */
 
@@ -568,7 +617,7 @@ body.dark-mode .project-card:hover {
     border-left: 5px solid var(--secondary-color);
     background: var(--snd-bg-color);
     border-radius: 0.8rem;
-    position: relative; 
+    position: relative; /* Ensure content shadows/z-index is above animation layer */
 }
 
 .cto-case-study p,
@@ -600,7 +649,7 @@ body.dark-mode .project-card:hover {
     border-radius: 0.8rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative; 
+    position: relative; /* Ensure content shadows/z-index is above animation layer */
 }
 
 .genre-selector {
@@ -640,7 +689,7 @@ body.dark-mode .project-card:hover {
     padding: 2rem;
     border-radius: 0.8rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    position: relative; 
+    position: relative; /* Ensure content shadows/z-index is above animation layer */
 }
 
 .menu-item-card {
@@ -693,9 +742,22 @@ body.dark-mode .project-card:hover {
     background: var(--snd-bg-color);
 }
 
-/* Remove animated backgrounds */
+/* --- ANIMATION APPLICATION (Contact - General Technical Vibe) --- */
 #contact::before {
-    content: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Wider than screen */
+    height: 100%;
+    z-index: -1;
+    /* Creating a subtle, animated pattern */
+    background: radial-gradient(circle, rgba(100, 170, 231, 0.08) 1px, transparent 1px),
+                radial-gradient(circle, rgba(100, 170, 231, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    animation: particle-flow 60s linear infinite reverse; /* Reverse animation for variety */
+    opacity: 0.5;
 }
 /* ----------------------------- */
 
