@@ -20,17 +20,27 @@
 
 /* DARK MODE VARIABLES (Applied to body via JS) */
 body.dark-mode {
-    --bg-color: #121212;      /* Very Dark Main background */
-    --snd-bg-color: #1e1e1e;  /* Slightly Lighter Dark background */
-    --text-color: #f0f0f0;    /* Main white/light gray text */
-    --main-color: #2c2c2c;    /* Dark container background */
+    --bg-color: #000000;      /* Pure Black Main background */
+    --snd-bg-color: #1a1a1a;  /* Dark gray Secondary background */
+    --text-color: #ffffff;    /* Pure White text */
+    --main-color: #333333;    /* Dark container background */
 }
 
 /* Removed global animated background keyframes/styles */
 
 html {
-    font-size: 100%; /* Reverted to 100% base for standard 16px interpretation */
+    font-size: 100%; /* Base for standard 16px interpretation */
     overflow-x : hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    /* Added transition for smooth theme switch */
+    transition: background-color 0.5s, color 0.5s; 
 }
 
 section {
@@ -125,9 +135,9 @@ section {
         }
 
         .navbar a {
-            font-size: 1.2rem; /* Adjusted down for tighter fit */
+            font-size: 1.9rem; /* RESTORED LARGER SIZE */
             color : var(--main-color);
-            margin-left : 2rem; /* Adjusted spacing */
+            margin-left : 4rem; /* RESTORED LARGER SPACING */
             font-weight: 700;
             transition : 0.3s ease;
 
@@ -140,7 +150,7 @@ section {
         
         /* Standardized menu button ID */
         #menu-icon { 
-            font-size: 3rem; /* Adjusted size */
+            font-size: 3.6rem; /* RESTORED LARGER SIZE */
             color : var(--main-color);
             cursor : pointer;
             display : none; /* Hidden by default on desktop */
@@ -148,10 +158,10 @@ section {
 
         /* --- Theme Toggle Button Styling --- */
         #theme-toggle {
-            font-size: 2rem; /* Adjusted size */
+            font-size: 2.4rem; /* RESTORED LARGER SIZE */
             color: var(--main-color);
             cursor: pointer;
-            margin-left: 2rem; /* Adjusted spacing */
+            margin-left: 4rem; /* RESTORED LARGER SPACING */
             transition: color 0.3s, transform 0.3s;
         }
         
@@ -174,7 +184,7 @@ section {
         }
         .home-img img {
     /* Set a reasonable maximum size for desktop, keeping 25vw for responsiveness */
-    max-width: 350px; /* Max image size reduction */
+    max-width: 400px; /* RESTORED LARGER SIZE */
     width: 25vw;
     height: 25vw; 
     object-fit: cover;
@@ -215,7 +225,7 @@ section {
 }
 
 .home-content h3 {
-    font-size: 2.5rem; /* Adjusted size */
+    font-size: 3.7rem; /* RESTORED LARGER SIZE */
     font-weight:700;
     /* Flashy Entrance 1: Hello, I'm */
     opacity: 0;
@@ -233,7 +243,7 @@ span {
     color : var(--secondary-color);
 }
 .home-content h1 {
-    font-size: 4rem; /* Adjusted size */
+    font-size: 6rem; /* RESTORED LARGER SIZE */
     font-weight: 700;
     line-height: 1.3;
     color: var(--text-color);
@@ -326,7 +336,7 @@ span {
 }
 
 .heading {
-    font-size: 3.5rem; /* Adjusted size */
+    font-size: 6rem; /* RESTORED LARGER SIZE */
     text-align : center;
 }
 
@@ -340,7 +350,7 @@ span {
 }
 
 .about-content h3 {
-    font-size: 2.5rem; /* Adjusted size */
+    font-size: 3rem; /* RESTORED LARGER SIZE */
     
 }
 
@@ -397,7 +407,7 @@ span {
 }
 
 .skills-card h3 {
-    font-size: 2.2rem; /* Adjusted size */
+    font-size: 2.5rem; /* RESTORED LARGER SIZE */
     color: var(--text-color);
     margin-bottom: 1rem;
 }
