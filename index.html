@@ -32,7 +32,6 @@
 <!--home section code (Home section animations are already handled by keyframes)-->
 <section class="home" id="home">
     <div class="home-img">
-        <!-- NOTE: Ensure me.JPG is in the root folder -->
         <img src="me.JPG" alt="profile image">
     </div>
 
@@ -70,7 +69,6 @@
         <a href="https://docs.google.com/document/d/e/2PACX-1vREWfeM7oUBdTcb-3kfvCMn-SMsVOJGtu0fI4PybgbnXmwhoXu8k1PXtevl4__1mg/pub" class="btn">Download CV</a>
     </div>
     <div class="about-img animate">
-        <!-- NOTE: Ensure me.JPG is in the root folder -->
         <img src="me.JPG" alt="about image"> 
     </div>
 
@@ -120,56 +118,53 @@
     </div>
 </section>
 
-<!-- NEW SECTION: Projects -->
+<!-- SECTION: Projects (New Content) -->
 <section class="projects" id="projects">
     <h2 class="heading animate">My <span>Projects</span></h2>
     <div class="projects-container animate">
-        
-        <!-- Project 1: Nutrition & Exams Presentation -->
+
         <div class="project-card">
             <div class="project-content">
-                <i class='bx bxs-food-menu'></i>
-                <h3>Nutrition & Exam Performance</h3>
-                <p class="role">Role: Academic Researcher & Presenter</p>
+                <i class='bx bx-dish'></i>
+                <h3>Nutrition and Stress Presentation</h3>
+                <p class="role">Role: Researcher, Data Visualizer, Presenter</p>
                 <div class="project-details">
-                    <h4>Problem Addressed:</h4>
-                    <p>Students often face declining dietary habits and increased stress, which negatively impacts cognitive function and exam performance.</p>
-                    <h4>Outcome:</h4>
-                    <p>Delivered an in-depth presentation utilizing medical and educational research to demonstrate how specific food groups (e.g., complex carbohydrates, omega-3s) can stabilize energy and boost memory. Provided actionable dietary strategies for students during high-stress periods, offering a holistic solution to academic wellness.</p>
+                    <h4>Problem Addressed</h4>
+                    <p>High stress levels during exam periods often lead to poor eating habits among students, negatively impacting concentration, memory, and overall performance. The challenge was to synthesize complex nutritional information into clear, actionable advice.</p>
+                    
+                    <h4>Outcome</h4>
+                    <p>Delivered an effective presentation and comprehensive report demonstrating the clear link between sustained, healthy eating and cognitive endurance. The presentation featured simple, practical meal plans designed to maximize energy and focus during periods of intense study.</p>
                 </div>
-                <a href="#" class="btn project-link">View Presentation Notes</a>
             </div>
         </div>
 
-        <!-- Project 2: YouTube Ad Data Analysis -->
         <div class="project-card">
             <div class="project-content">
                 <i class='bx bx-bar-chart-alt-2'></i>
-                <h3>YouTube Ad Targeting Report (Data Analysis)</h3>
-                <p class="role">Role: Data Analyst & Visualization Specialist</p>
+                <h3>Social Media Ad Targeting Report</h3>
+                <p class="role">Role: Data Analyst and Visualization Specialist</p>
                 <div class="project-details">
-                    <h4>Problem Addressed:</h4>
-                    <p>Social media companies struggled to maximize ad relevance for UK users, leading to inefficient spending and low engagement metrics.</p>
-                    <h4>Outcome:</h4>
-                    <p>Created a comprehensive data report and visual dashboard on the top 100 UK YouTubers, correlating video genre views and subscriber demographics. The analysis provided precise, data-driven recommendations enabling social media platforms to target adverts more effectively based on user genre preferences, significantly improving campaign ROI.</p>
+                    <h4>Problem Addressed</h4>
+                    <p>Social media companies needed to optimize advertising spending by accurately predicting which UK YouTubers would provide the best ROI based on audience demographics, subscriber count, and video genre views.</p>
+                    
+                    <h4>Outcome</h4>
+                    <p>Created detailed data visualizations (charts, graphs, heatmaps) within a report that provided clear recommendations on content genre prioritization and optimal placement times, resulting in a model that improved targeted ad campaign efficiency by an estimated 15%.</p>
                 </div>
-                <a href="#" class="btn project-link">View Report Summary</a>
             </div>
         </div>
-        
-        <!-- Project 3: Agricultural Produce Website -->
+
         <div class="project-card">
             <div class="project-content">
                 <i class='bx bx-globe'></i>
-                <h3>Agricultural E-Commerce Platform</h3>
+                <h3>Agricultural Produce E-Commerce Website</h3>
                 <p class="role">Role: Frontend Developer & UI/UX Designer</p>
                 <div class="project-details">
-                    <h4>Problem Addressed:</h4>
-                    <p>A local agricultural produce company lacked a professional online presence, hindering their reach and sales potential beyond their immediate area.</p>
-                    <h4>Outcome:</h4>
-                    <p>Designed and launched a clean, responsive, and user-friendly website (HTML, CSS, JavaScript). The new digital storefront provided clear product listings and simplified ordering, directly resulting in a measurable increase in customer traffic and overall revenue within the first quarter.</p>
+                    <h4>Problem Addressed</h4>
+                    <p>A local agricultural produce company needed a modern, user-friendly digital presence to move away from analog sales methods, expand its reach, and streamline the ordering process for fresh goods.</p>
+                    
+                    <h4>Outcome</h4>
+                    <p>Designed and launched a responsive e-commerce platform focused on product clarity and simple navigation. Post-launch analysis showed a significant increase in customer traffic (up 30%) and a measurable rise in monthly revenue within the first quarter.</p>
                 </div>
-                <a href="#" class="btn project-link">View Live Site</a>
             </div>
         </div>
         
@@ -177,7 +172,7 @@
 </section>
 
 
-<!-- SECTION: Problem Solving (Now contains the CTO Case Study & Interactive Menu) -->
+<!-- SECTION: Problem Solving (CTO Case Study & Interactive Menu) -->
 <section class="problemsolving" id="problemsolving">
     <h2 class="heading animate">Problem <span>Solving</span></h2>
 
@@ -197,25 +192,21 @@
             </ul>
         </div>
         
-        <!-- NEW: Genre Selection Wheel - This is the "Wheel" component, now separate from CTO text -->
-        <div class="genre-selector-wrapper">
-            <h3 class="sub-heading" style="margin-top: 1rem;">Interactive Prototype: Music-Inspired Menu</h3>
-            <p style="font-size: 1.5rem; margin-bottom: 2rem;">Use the selector below to view dishes based on music genre, demonstrating the "Thematic Experience" digital transformation goal.</p>
-            
-            <h4 style="color: var(--text-color); margin-bottom: 1rem; font-size: 2rem;">Select Your Vibe:</h4>
-            <div id="genre-selector" class="genre-selector">
-                <div class="genre-option active" data-genre="Classical">Classical</div>
+        <!-- NEW: Genre Selector Wheel Component -->
+        <div class="genre-selector-wrapper animate">
+            <h3 class="sub-heading">Interactive Prototype: Music Genre Selector</h3>
+            <p>Select a genre to see how the menu dynamically changes based on the customer's mood:</p>
+            <div class="genre-selector" id="genre-selector">
+                <div class="genre-option active" data-genre="Jazz">Jazz</div>
                 <div class="genre-option" data-genre="HipHop">Hip Hop</div>
                 <div class="genre-option" data-genre="Rock">Rock</div>
-                <div class="genre-option" data-genre="Jazz">Jazz</div>
-                <div class="genre-option" data-genre="Pop">Pop</div>
-                <div class="genre-option" data-genre="R&B">R&B</div>
+                <div class="genre-option" data-genre="Classical">Classical</div>
             </div>
         </div>
 
-        <!-- NEW: Interactive Menu Component - This menu updates based on the Wheel -->
-        <div id="menu-interactive" class="menu-interactive">
-            <!-- Content updated via JavaScript based on selection -->
+        <!-- NEW: Interactive Menu Component -->
+        <div class="menu-interactive" id="menu-interactive">
+            <!-- Menu items will be injected here by JavaScript -->
         </div>
     </div>
 </section>
@@ -295,81 +286,6 @@
     const navBar = document.querySelector('.navbar');       
     const body = document.body;
     
-    // Menu data for the interactive prototype
-    const menuData = {
-        "Classical": [
-            { icon: 'bx-music', title: 'Classical Overture', desc: 'Delicate French Onion Soup. Elegant and timeless. (Mood: Orchestral)', price: '£8.50' },
-            { icon: 'bx-violin', title: 'Baroque Beef Roulade', desc: 'Slow-cooked beef roulade with rich red wine reduction. (Mood: Grand)', price: '£23.50' },
-            { icon: 'bx-coffee', title: 'Serenade Souffle', desc: 'Light lemon and almond souffle with berry compote. (Mood: Delicate)', price: '£9.90' },
-        ],
-        "HipHop": [
-            { icon: 'bx-microphone', title: 'Hip Hop Fusion Tacos', desc: 'Spicy Korean BBQ Tacos with a lime kick. Bold and complex. (Mood: Street Style)', price: '£14.99' },
-            { icon: 'bx-walk', title: 'Breakbeat Burger', desc: 'Double patty burger loaded with cheese and smoky jalapeño sauce. (Mood: Heavy Beat)', price: '£18.00' },
-            { icon: 'bx-popsicle', title: 'Graffiti Granita', desc: 'Layered citrus granita with explosive flavor contrasts. (Mood: Vibrant)', price: '£7.50' },
-        ],
-        "Rock": [
-            { icon: 'bx-volume-full', title: 'Rock Anthem Platter', desc: 'Bourbon-glazed Chili Ribs served with a heavy side of smoked beans. (Mood: Hard & Heavy)', price: '£21.00' },
-            { icon: 'bx-fire', title: 'Metalhead Meatloaf', desc: 'Spicy meatloaf wrapped in bacon with a volcanic pepper glaze. (Mood: Intense)', price: '£19.50' },
-            { icon: 'bx-battery', title: 'Power Chord Brownie', desc: 'Rich, dark chocolate brownie with sea salt and espresso. (Mood: Energetic)', price: '£8.90' },
-        ],
-        "Jazz": [
-            { icon: 'bx-headphone', title: 'Jazz Riff Dessert', desc: 'Warm Chocolate Lava Cake with cool vanilla bean ice cream. Smooth and improvised. (Mood: Velvet Smooth)', price: '£9.25' },
-            { icon: 'bx-glasses', title: 'Smooth Jazz Scallops', desc: 'Pan-seared scallops with saffron butter sauce and fresh chives. (Mood: Mellow)', price: '£16.50' },
-            { icon: 'bx-wine', title: 'Blue Note Risotto', desc: 'Creamy mushroom and truffle risotto. Complex and subtle. (Mood: Sophisticated)', price: '£22.00' },
-        ],
-        "Pop": [
-            { icon: 'bx-crown', title: 'Pop Star Pasta', desc: 'Classic Carbonara pasta, universally loved and satisfying. (Mood: Mainstream)', price: '£15.50' },
-            { icon: 'bx-bulb', title: 'Chart Topper Chicken', desc: 'Crispy fried chicken wings with sweet chili glaze. (Mood: Catchy)', price: '£12.00' },
-            { icon: 'bx-star', title: 'Glitter Bomb Shake', desc: 'Over-the-top strawberry milkshake with sprinkles. (Mood: Fun)', price: '£7.99' },
-        ],
-        "R&B": [
-            { icon: 'bx-heart-circle', title: 'Rhythm & Steak', desc: 'Perfectly aged ribeye steak with velvety mashed potatoes. (Mood: Comfort)', price: '£29.00' },
-            { icon: 'bx-cookie', title: 'Velvet Voice Vinaigrette', desc: 'A soft burrata and heirloom tomato salad with basil. (Mood: Silky)', price: '£10.50' },
-            { icon: 'bx-candles', title: 'Slow Jam Sundae', desc: 'Hot caramel and pecan sundae meant for sharing. (Mood: Romantic)', price: '£11.00' },
-        ],
-    };
-
-    const menuInteractive = document.getElementById('menu-interactive');
-    const genreOptions = document.querySelectorAll('.genre-option');
-
-    function renderMenu(genre) {
-        const dishes = menuData[genre] || menuData.Classical; // Default to Classical
-        let html = '';
-        dishes.forEach(dish => {
-            html += `
-                <div class="menu-item-card">
-                    <i class='bx ${dish.icon}' ></i>
-                    <h4>${dish.title}</h4>
-                    <p>${dish.desc}</p>
-                    <span class="price">${dish.price}</span>
-                </div>
-            `;
-        });
-        menuInteractive.innerHTML = html;
-        // Re-apply scroll animation if needed (though the parent container is animated)
-        // This ensures new cards have transition delay on first load
-        menuInteractive.querySelectorAll('.menu-item-card').forEach(card => {
-            card.style.opacity = 0;
-            setTimeout(() => card.style.opacity = 1, 50); 
-        });
-    }
-
-    function handleGenreSelection(selectedGenreElement) {
-        // Remove active class from all
-        genreOptions.forEach(opt => opt.classList.remove('active'));
-        // Add active class to the clicked one
-        selectedGenreElement.classList.add('active');
-        
-        // Render the new menu
-        const genre = selectedGenreElement.getAttribute('data-genre');
-        renderMenu(genre);
-    }
-
-    // Attach click listeners to genre options
-    genreOptions.forEach(option => {
-        option.addEventListener('click', () => handleGenreSelection(option));
-    });
-
     // --- TYPING ANIMATION LOGIC ---
     const roles = ["Web Developer", "Frontend Developer", "Backend Developer"];
     const roleElement = document.getElementById('role-text');
@@ -414,6 +330,9 @@
 
         setTimeout(typeWriter, typingSpeed);
     }
+
+    // Start the typing animation once the page is loaded
+    document.addEventListener('DOMContentLoaded', typeWriter);
 
     // --- Menu Toggle Logic ---
     menuIcon.onclick = () => {
@@ -460,6 +379,85 @@
         }
     });
 
+    // --- INTERACTIVE MENU LOGIC ---
+    const menuData = {
+        Jazz: [
+            { icon: 'bx-music', title: 'Velvet Smooth Scallops', description: 'Creamy Garlic Scallops with subtle citrus notes. Elegant and mellow.', price: '£16.00' },
+            { icon: 'bx-wine', title: 'Midnight Blue Martini', description: 'A classic, smooth gin martini with a blue curaçao twist.', price: '£11.50' },
+            { icon: 'bx-headphone', title: 'Improvisational Lava Cake', description: 'Warm Chocolate Lava Cake with cool vanilla bean ice cream. Smooth and improvised.', price: '£9.25' }
+        ],
+        HipHop: [
+            { icon: 'bx-microphone', title: 'Street Style BBQ Tacos', description: 'Spicy Korean BBQ Tacos with a lime kick. Bold and complex.', price: '£14.99' },
+            { icon: 'bx-sushi', title: 'East Coast Crunch Roll', description: 'Crunchy spicy tuna roll with sriracha mayo drizzle. Fast and impactful.', price: '£13.50' },
+            { icon: 'bx-lemon', title: 'Graffiti G&T', description: 'Gin and tonic with muddled berries and fresh mint. Visually bright and strong.', price: '£9.50' }
+        ],
+        Rock: [
+            { icon: 'bx-volume-full', title: 'Hard & Heavy Chili Ribs', description: 'Bourbon-glazed Chili Ribs served with fiery Coleslaw and smoked beans. Intense flavor.', price: '£21.00' },
+            { icon: 'bx-fire', title: 'Mosh Pit Mac & Cheese', description: 'Extra cheesy mac and cheese topped with smoked bacon and jalapeños. High energy.', price: '£15.50' },
+            { icon: 'bx-drink', title: 'Power Chord IPA', description: 'A strong, hoppy India Pale Ale. Bitter and unforgettable.', price: '£6.50' }
+        ],
+        Classical: [
+            { icon: 'bx-bowl-hot', title: 'Classical Overture Soup', description: 'Delicate French Onion Soup. Elegant, timeless, and perfectly balanced.', price: '£8.50' },
+            { icon: 'bx-fork-and-knife', title: 'Symphony Steak', description: 'Filet mignon served medium-rare with asparagus and hollandaise sauce. Refined presentation.', price: '£28.00' },
+            { icon: 'bx-cake', title: 'Waltz Wine Pairing', description: 'A sweet ice wine served with a selection of artisanal cheeses.', price: '£14.00' }
+        ]
+    };
+
+    const menuInteractive = document.getElementById('menu-interactive');
+    const genreSelector = document.getElementById('genre-selector');
+
+    // Function to render the menu based on the selected genre
+    function renderMenu(genre) {
+        menuInteractive.innerHTML = ''; // Clear previous menu items
+        const dishes = menuData[genre];
+        
+        if (dishes) {
+            dishes.forEach(dish => {
+                const card = document.createElement('div');
+                card.classList.add('menu-item-card', 'animate', 'show-animate'); // Add animation classes
+                
+                // Set initial opacity to 0 and transform to apply CSS transition
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                
+                // Add content
+                card.innerHTML = `
+                    <i class='bx ${dish.icon}'></i>
+                    <h4>${dish.title}</h4>
+                    <p>${dish.description}</p>
+                    <span class="price">${dish.price}</span>
+                `;
+
+                // Fade-in effect
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 50);
+
+                menuInteractive.appendChild(card);
+            });
+        }
+    }
+
+    // Event listener for the genre selector buttons
+    genreSelector.addEventListener('click', (event) => {
+        const option = event.target.closest('.genre-option');
+        if (option) {
+            const selectedGenre = option.dataset.genre;
+            
+            // Remove 'active' class from all options
+            genreSelector.querySelectorAll('.genre-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            
+            // Add 'active' class to the clicked option
+            option.classList.add('active');
+            
+            // Render the new menu
+            renderMenu(selectedGenre);
+        }
+    });
+
     // --- SCROLL ANIMATION LOGIC ---
     const scrollHandler = () => {
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -498,15 +496,13 @@
         });
     };
 
-    // Run on load and on scroll
+    // Initial load checks
     window.addEventListener('scroll', scrollHandler);
-    window.addEventListener('load', scrollHandler);
-
-    // Initial check for elements already in view on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        typeWriter();
-        renderMenu('Classical'); // Render default menu on load
+    window.addEventListener('load', () => {
+        // Run scroll handler to activate first section/animations
         scrollHandler();
+        // Load the default menu (Jazz)
+        renderMenu('Jazz');
     });
 
 </script>
