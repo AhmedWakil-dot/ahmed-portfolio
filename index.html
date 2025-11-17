@@ -350,57 +350,34 @@
         });
     });
 
-    // --- DARK MODE LOGIC (Updated to respect system preference) ---
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-    const applyTheme = (isDark) => {
-        if (isDark) {
+    // --- DARK MODE LOGIC (Reverted to manual toggle) ---
+    const activateDarkMode = (enable) => {
+        if (enable) {
             body.classList.add('dark-mode');
             themeToggle.classList.replace('bx-moon', 'bx-sun');
+            localStorage.setItem('darkMode', 'enabled');
         } else {
             body.classList.remove('dark-mode');
             themeToggle.classList.replace('bx-sun', 'bx-moon');
-        }
-    };
-    
-    const initializeTheme = () => {
-        // 1. Check local storage for user override
-        const storedMode = localStorage.getItem('darkMode');
-
-        if (storedMode === 'enabled') {
-            applyTheme(true);
-        } else if (storedMode === 'disabled') {
-            applyTheme(false);
-        } else {
-            // 2. Default to system preference
-            applyTheme(prefersDark.matches);
-        }
-    };
-
-
-    // Toggle listener (handles manual override and saves preference)
-    themeToggle.addEventListener('click', () => {
-        const isCurrentlyDark = body.classList.contains('dark-mode');
-        
-        // Toggle and save the *override* preference
-        if (isCurrentlyDark) {
-            applyTheme(false);
             localStorage.setItem('darkMode', 'disabled');
-        } else {
-            applyTheme(true);
-            localStorage.setItem('darkMode', 'enabled');
         }
-    });
-    
-    // Listen for system changes while running (only if no manual override is set)
-    prefersDark.addListener(() => {
-        if (localStorage.getItem('darkMode') === null) {
-             applyTheme(prefersDark.matches);
-        }
-    });
+    };
 
-    // Run initialization
-    initializeTheme();
+    // Load saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        activateDarkMode(true);
+    } else {
+        activateDarkMode(false);
+    }
+
+    // Toggle listener
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            activateDarkMode(false);
+        } else {
+            activateDarkMode(true);
+        }
+    });
 
     // --- INTERACTIVE MENU LOGIC ---
     const menuData = {
