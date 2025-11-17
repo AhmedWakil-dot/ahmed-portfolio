@@ -593,7 +593,7 @@ body.dark-mode .project-card:hover {
     margin-bottom: 0.8rem;
 }
 
-/* NEW: Genre Selector Wheel Styles */
+/* NEW: Genre Selector Wrapper and Styles */
 .genre-selector-wrapper {
     margin-top: 3rem;
     padding: 2rem;
@@ -650,13 +650,15 @@ body.dark-mode .project-card:hover {
     text-align: center;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.5s ease; /* Ensure dynamic updates are smooth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Added box shadow for lift effect */
+    /* ENHANCED HOVER EFFECT FOR MENU ITEMS */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+    transform-style: preserve-3d;
 }
 
 .menu-item-card:hover {
-    transform: scale(1.03); /* Subtle hover for menu items */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) rotateX(1deg) rotateY(-1deg); /* Subtle 3D lift/tilt */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 10px var(--secondary-color); /* Glow */
 }
 
 .menu-item-card i {
@@ -743,4 +745,161 @@ body.dark-mode .project-card:hover {
 .input-box input:focus,
 .contact-container form textarea:focus {
     border-color: var(--secondary-color);
-    box
+    box-shadow: 0 0 1rem rgba(100, 170, 231, 0.4); /* Subtle glow effect */
+}
+/* ------------------------------------- */
+
+.input-box input {
+    width: 49%;
+}
+
+.contact-container form textarea {
+    resize: none;
+}
+
+/* MAP ADJUSTMENTS: Reverted to embedded map with custom link below */
+.map-container {
+    flex: 1 1 45rem; 
+    min-height: 300px; /* Set minimum height for the embedded map */
+    max-width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.map-container .heading {
+    margin-bottom: 2rem;
+}
+
+/* iframe styling to fill container height */
+.map-container iframe {
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1; 
+}
+
+/* Custom styling for the external map link button */
+.map-external-link {
+    /* Uses existing .btn styling for primary look */
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.map-external-link i {
+    margin-left: 0.8rem;
+    font-size: 1.8rem;
+}
+
+
+/* ---------------------------------- */
+/* MOBILE STYLES (Max 768px width) */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    
+    /* FIX: Ensure icon is visible and aligned to the right, separate from the content flow */
+    #menu-icon {
+        display: block;
+        /* Aligned in the header flex container */
+        z-index: 1001; /* Must be above the sliding navbar */
+    }
+    
+    .header {
+        padding: 2rem 5%;
+    }
+
+    /* NAV BAR MOBILE OVERLAY FIX */
+    .navbar {
+        position: fixed;
+        top: 0; 
+        right: -100%; 
+        width: 100%;
+        height: 100vh;
+        
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-start; 
+        align-items: flex-start;
+        
+        background: var(--secondary-color);
+        transition: right 0.4s ease-in-out;
+        z-index: 999;
+        overflow-y: auto;
+        padding: 10rem 5%; 
+        backdrop-filter: none;
+    }
+    
+    /* Active state: slide in from the right */
+    .navbar.active-nav {
+        right: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2.8rem; 
+        width: 100%; 
+        text-align: left;
+        padding: 1rem 0;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        border-bottom: none;
+    }
+    
+    /* Move the toggle button inside the mobile nav and adjust alignment */
+    #theme-toggle {
+        margin-left: 0;
+        margin-top: 3rem;
+        font-size: 3.2rem;
+        color: var(--main-color); 
+    }
+
+    /* Grid Mobile Fixes */
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-interactive {
+        grid-template-columns: 1fr;
+    }
+    
+    .about, .home {
+        flex-direction: column;
+    }
+    
+    .home-img, .about-img {
+        order: -1; /* Puts image above text on mobile */
+        margin-bottom: 3rem;
+    }
+    
+    .home-content, .about-content {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .home-content h3, .about-content h3 {
+        text-align: center;
+    }
+    
+    .home-img img, .about-img img {
+        width: 60vw;
+        height: 60vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .contact-container {
+        /* Forces the map/form split to stack */
+        flex-direction: column; 
+    }
+}
