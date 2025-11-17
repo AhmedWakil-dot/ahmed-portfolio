@@ -28,6 +28,11 @@ body.dark-mode {
 
 /* Removed global animated background keyframes/styles */
 
+html {
+    font-size: 100%; /* Reverted to 100% base for standard 16px interpretation */
+    overflow-x : hidden;
+}
+
 section {
     min-height : 100vh;
     padding : 10rem 9% 2rem;
@@ -120,9 +125,9 @@ section {
         }
 
         .navbar a {
-            font-size: 1.9rem;
+            font-size: 1.2rem; /* Adjusted down for tighter fit */
             color : var(--main-color);
-            margin-left : 4rem;
+            margin-left : 2rem; /* Adjusted spacing */
             font-weight: 700;
             transition : 0.3s ease;
 
@@ -135,7 +140,7 @@ section {
         
         /* Standardized menu button ID */
         #menu-icon { 
-            font-size: 3.6rem;
+            font-size: 3rem; /* Adjusted size */
             color : var(--main-color);
             cursor : pointer;
             display : none; /* Hidden by default on desktop */
@@ -143,10 +148,10 @@ section {
 
         /* --- Theme Toggle Button Styling --- */
         #theme-toggle {
-            font-size: 2.4rem;
+            font-size: 2rem; /* Adjusted size */
             color: var(--main-color);
             cursor: pointer;
-            margin-left: 4rem; /* Spacing from the last navigation link */
+            margin-left: 2rem; /* Adjusted spacing */
             transition: color 0.3s, transform 0.3s;
         }
         
@@ -161,11 +166,15 @@ section {
     display: flex; 
     justify-content: center;
     align-items: center;
+    /* ENSURE BACKGROUND COLOR FOLLOWS THEME */
+    background: var(--bg-color); 
+    color: var(--text-color);
+    /* ----------------------------------- */
 
         }
         .home-img img {
     /* Set a reasonable maximum size for desktop, keeping 25vw for responsiveness */
-    max-width: 400px; 
+    max-width: 350px; /* Max image size reduction */
     width: 25vw;
     height: 25vw; 
     object-fit: cover;
@@ -206,7 +215,7 @@ section {
 }
 
 .home-content h3 {
-    font-size: 3rem; /* ADJUSTED SIZE from 3.7rem */
+    font-size: 2.5rem; /* Adjusted size */
     font-weight:700;
     /* Flashy Entrance 1: Hello, I'm */
     opacity: 0;
@@ -224,7 +233,7 @@ span {
     color : var(--secondary-color);
 }
 .home-content h1 {
-    font-size: 4.8rem; /* ADJUSTED SIZE from 5.5rem */
+    font-size: 4rem; /* Adjusted size */
     font-weight: 700;
     line-height: 1.3;
     color: var(--text-color);
@@ -317,7 +326,7 @@ span {
 }
 
 .heading {
-    font-size: 4.2rem; /* ADJUSTED SIZE from 5rem */
+    font-size: 3.5rem; /* Adjusted size */
     text-align : center;
 }
 
@@ -331,7 +340,7 @@ span {
 }
 
 .about-content h3 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjusted size */
     
 }
 
@@ -388,7 +397,7 @@ span {
 }
 
 .skills-card h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Adjusted size */
     color: var(--text-color);
     margin-bottom: 1rem;
 }
@@ -477,7 +486,7 @@ body.dark-mode .skills-card:hover {
 }
 
 .project-card h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Adjusted size */
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -898,11 +907,11 @@ body.dark-mode .project-card:hover {
     }
     
     .home-content h1 {
-        font-size: 3.8rem; /* ADJUSTED SIZE for mobile */
+        font-size: 3rem; /* Adjusted size */
     }
 
     .heading {
-        font-size: 3.5rem; /* ADJUSTED SIZE for mobile */
+        font-size: 3rem; /* Adjusted size */
     }
 
     .home-img img, .about-img img {
