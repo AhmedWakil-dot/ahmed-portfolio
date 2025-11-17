@@ -43,6 +43,8 @@ body {
 section {
     min-height : 100vh;
     padding : 10rem 9% 2rem;
+    /* Added perspective for 3D card animation */
+    perspective: 1500px; 
 }
 
 /* --- SCROLL ANIMATION CLASSES --- */
@@ -420,6 +422,119 @@ body.dark-mode .skills-card:hover {
     box-shadow: 0 0 2.5rem rgba(100, 170, 231, 0.2);
 }
 
+/* NEW SECTION STYLES: PROJECTS */
+.projects {
+    background: var(--snd-bg-color);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.project-card {
+    background: var(--main-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Set up for 3D and lift effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+/* 3D and Lift Effect on Hover */
+.project-card:hover {
+    /* Lift and rotate slightly in 3D space */
+    transform: translateY(-15px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2), 0 0 30px var(--secondary-color);
+}
+
+.project-content {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+}
+
+.project-card i {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+
+.project-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.project-card h3 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card .role {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Inner Detail Animation Setup */
+.project-details {
+    margin-top: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+    flex-grow: 1;
+}
+
+.project-card:hover .project-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-details h4 {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--snd-bg-color);
+    padding-bottom: 0.3rem;
+}
+
+.project-details p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    /* Ensure the button is visible regardless of the detail slide */
+}
+
+/* Dark Mode specific project adjustments */
+body.dark-mode .project-card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--main-color);
+}
+body.dark-mode .project-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(100, 170, 231, 0.5);
+}
+
+
 /* Problem Solving Section (Added Case Study Styling) */
 .problemsolving {
     background: var(--bg-color);
@@ -700,6 +815,10 @@ body.dark-mode .skills-card:hover {
 
     /* Grid Mobile Fixes */
     .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
         grid-template-columns: 1fr;
     }
 
