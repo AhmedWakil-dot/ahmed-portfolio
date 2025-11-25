@@ -9,12 +9,10 @@
 </head>
 <body>
 
-<!-- Header section -->
 <header class="header">
     <a href="#home" class="logo">Ahmed Wakil</a>
 
-    <!-- MENU TOGGLE ICON (Used on Mobile) -->
-    <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-menu' id="menu-icon"></i>
 
     <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -24,12 +22,10 @@
         <a href="#problemsolving">Problem Solving</a>
         <a href="#contact">Contact</a>
         
-        <!-- DARK MODE TOGGLE BUTTON ADDED HERE -->
-        <i class='bx bx-moon' id="theme-toggle"></i>
+                <i class='bx bx-moon' id="theme-toggle"></i>
     </nav>
 </header>
 
-<!--home section code (Home section animations are already handled by keyframes)-->
 <section class="home" id="home">
     <div class="home-img">
         <img src="me.JPG" alt="profile image">
@@ -38,8 +34,7 @@
     <div class="home-content">
         <h3>Hello, I'm</h3>
         <h1>Ahmed Wakil</h1>
-        <!-- UPDATED: Text cycling happens inside the span via JS -->
-        <h3>And I'm a <span id="role-text" class="typing"></span></h3>
+                <h3>And I'm a <span id="role-text" class="typing"></span></h3>
         <p>
             Welcome to my portfolio website! I'm a passionate web developer with a knack for creating 
             dynamic and responsive web applications. Explore my skills, projects, and get in touch!
@@ -60,7 +55,6 @@
     </div>
 </section>
 
-<!-- about section code-->
 <section class="about" id="about">
     <div class="about-content animate">
         <h2 class ="heading animate">about <span>Me</span></h2>
@@ -74,7 +68,6 @@
 
 </section>
 
-<!-- SECTION: Skills (New Content from CV) -->
 <section class="skills" id="skills">
     <h2 class="heading animate">My <span>Skills</span></h2>
     <div class="skills-container animate">
@@ -119,7 +112,6 @@
 </section>
 
 
-<!-- SECTION: Projects -->
 <section class="projects" id="projects">
     <h2 class="heading animate">Recent <span>Projects</span></h2>
     <div class="projects-container animate">
@@ -169,19 +161,15 @@
     </div>
 </section>
 
-<!-- SECTION: Problem Solving (Now contains the CTO Case Study & Interactive Menu) -->
 <section class="problemsolving" id="problemsolving">
     <h2 class="heading animate">Problem <span>Solving</span></h2>
 
     <div class="problemsolving-container animate">
         
-        <!-- CTO Introduction and Digital Transformation Goals (Assessment Content) -->
-        <div class="cto-case-study">
+                <div class="cto-case-study">
             <p>As the **Chief Technology Officer (CTO)** of "Rhythm & Feast," a local restaurant specializing in music genre-themed cuisine, my goal is to execute a digital transformation centered on enhancing the unique customer experience.
             </p>
             <h3 class="sub-heading">🎧 Digital Transformation Goals: Rhythm & Feast</h3>
-            <p>Our web-based solution aims to achieve three core goals:</p>
-
             <ul>
                 <li>**Improve Customer Engagement (Thematic Experience):** Digitize our unique value proposition—connecting music and food—by making our special menu and concept immediately accessible and engaging online.</li>
                 <li>**Streamline Bookings & Service:** Replace manual booking and inquiry methods with a self-service interactive form, ensuring all critical customer data (date, time, party size) is captured accurately and immediately communicated to staff via email.</li>
@@ -189,8 +177,7 @@
             </ul>
         </div>
         
-        <!-- NEW: Genre Selector Wrapper and Menu Control -->
-        <div class="genre-selector-wrapper animate">
+                <div class="genre-selector-wrapper animate">
             <h3 class="sub-heading">Interactive Prototype: Music Genre Selector</h3>
             <div class="genre-selector" id="genre-selector">
                 <div class="genre-option active" data-genre="all">Full Menu</div>
@@ -201,31 +188,25 @@
             </div>
         </div>
 
-        <!-- INTERACTIVE MENU COMPONENT -->
-        <div class="menu-interactive animate" id="menu-interactive">
-            <!-- Menu items are rendered here by JavaScript -->
-        </div>
+                <div class="menu-interactive animate" id="menu-interactive">
+                    </div>
 
     </div>
 </section>
 
-<!-- SECTION: Contact (Assessment Required Elements) -->
 <section class="contact" id="contact">
     <h2 class="heading animate">Book Your <span>Experience</span></h2>
 
     <div class="contact-container animate">
         
-        <!-- Assessment Required Elements START -->
-        <form action="mailto:rhythmandfeast@example.com?subject=New Reservation/Inquiry" method="POST" enctype="text/plain">
+                <form action="mailto:rhythmandfeast@example.com?subject=New Reservation/Inquiry" method="POST" enctype="text/plain">
             
-            <!-- Contact Details & Social Links -->
-            <div class="contact-details">
+                        <div class="contact-details">
                 <h3>Contact Details & Socials:</h3>
                 <p>📞 Phone: (555) 123-4567 | 📧 Email: info@rhythmandfeast.com</p>
                 <p>📍 Address: 101 Rhythm Lane, Food City, CA 90210</p>
                 
-                <!-- Social Media Links (as requested) -->
-                <div class="social-media">
+                                <div class="social-media">
                     <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
                     <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
                     <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
@@ -233,8 +214,7 @@
                 <hr>
             </div>
             
-            <!-- Interactive Booking Form -->
-            <div class="input-box">
+                        <div class="input-box">
                 <input type="text" name="Name" placeholder="Full Name" required>
                 <input type="email" name="Email" placeholder="Email Address" required>
             </div>
@@ -250,31 +230,32 @@
 
             <textarea name="Message/Feedback" cols="30" rows="10" placeholder="Special Request or Feedback"></textarea>
             
-            <!-- Form automatically generates email with user input (mailto) -->
-            <input type="submit" value="Send Booking/Inquiry" class="btn">
+                        <input type="submit" value="Send Booking/Inquiry" class="btn">
         </form>
 
-        <!-- Map Display: Embedded map with external link button -->
-        <div class="map-container">
+                <div class="map-container">
             <h3 class="heading">Find Us</h3>
             
-            <!-- Embedded Map -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250552726526!2d-122.41941558468165!3d37.77492997975936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806c9b9b0001%3A0x7d25e0a6d0d5b4e!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1636545123456!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250552726526!2d-122.41941558468165!3d37.77492997975936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806c9b9b0001%3A0x7d25e0a6d0d5b4e!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1636545123456!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-            <!-- External Link Button using existing .btn styling -->
-            <a href="https://www.google.com/maps/search/?api=1&query=101+Rhythm+Lane,+Food+City,+CA+90210" target="_blank" class="btn map-external-link">
+                        <a href="https://www.google.com/maps/search/?api=1&query=101+Rhythm+Lane,+Food+City,+CA+90210" target="_blank" class="btn map-external-link">
                 View Full Map <i class='bx bx-map'></i>
             </a>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p style="text-align: center; padding: 2rem; background: var(--secondary-color); color: var(--main-color); margin-top: 0;">&copy; 2025 Ahmed Wakil Portfolio</p>
+    <p style="text-align: center; padding: 2rem; background: var(--secondary-color); color: var(--main-color); margin-top: 0;">© 2025 Ahmed Wakil Portfolio</p>
 </footer>
 
-<!-- JAVASCRIPT FOR SCROLL ANIMATIONS, DARK MODE, AND TYPING EFFECT -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>
+        This site uses essential cookies to enhance user experience (e.g., dark mode preference, interactive menu state). By continuing, you agree to their use.
+        <a href="#contact" class="link-policy">Learn More</a>
+    </p>
+    <button id="accept-cookies" class="btn">Accept & Close</button>
+</div>
 <script>
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar a');
@@ -505,9 +486,34 @@
     document.addEventListener('DOMContentLoaded', () => {
         renderMenu('all');
     });
+    
+    // --- COOKIE CONSENT LOGIC ---
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptButton = document.getElementById('accept-cookies');
+    const COOKIE_KEY = 'cookiesAccepted';
+
+    function checkCookieConsent() {
+        // Check if the user has previously accepted cookies
+        const accepted = localStorage.getItem(COOKIE_KEY);
+
+        if (accepted !== 'true') {
+            // If not accepted, show the banner after a short delay
+            setTimeout(() => {
+                cookieBanner.classList.add('show');
+            }, 1000); 
+        }
+
+        // Listener to hide the banner and store the preference
+        acceptButton.addEventListener('click', () => {
+            localStorage.setItem(COOKIE_KEY, 'true');
+            cookieBanner.classList.remove('show');
+        });
+    }
+
+    // Call the function on load
+    document.addEventListener('DOMContentLoaded', checkCookieConsent);
 
 </script>
 
 </body>
 </html>
-
