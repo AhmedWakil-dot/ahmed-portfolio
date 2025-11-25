@@ -937,4 +937,62 @@ body.dark-mode .project-card:hover {
     }
 }
 
-add a cookie consent banner
+
+/* --- COOKIE CONSENT BANNER STYLES --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Use main-color (dark gray/white) as background for contrast */
+    background: var(--main-color);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000; /* Ensure it's on top of everything */
+    transform: translateY(100%); /* Start hidden */
+    transition: transform 0.5s ease-out;
+}
+
+.cookie-banner.show {
+    transform: translateY(0); /* Slide into view */
+}
+
+.cookie-banner p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-right: 2rem;
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Link style for the "Learn More" */
+.cookie-banner .link-policy {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Button uses existing .btn style for consistency */
+.cookie-banner .btn {
+    margin: 0;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        padding: 1.5rem 5%;
+        text-align: center;
+    }
+    .cookie-banner p {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}
