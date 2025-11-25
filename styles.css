@@ -111,14 +111,16 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center; /* Ensures vertical alignment */
-    padding : 2rem 9%;
+    /* MODIFIED: Reduced vertical padding from 2rem to 1.5rem */
+    padding : 1.5rem 9%;
     background : var(--secondary-color);
     backdrop-filter: blur(10px);
     transition : all 0.5s ease;
     }
 
     .logo {
-        font-size: 3rem;
+        /* MODIFIED: Reduced logo size from 3rem to 2.5rem */
+        font-size: 2.5rem;
         font-weight: 700;
         color : var(--main-color);
         cursor : pointer;
@@ -135,9 +137,11 @@ section {
         }
 
         .navbar a {
-            font-size: 1.9rem; /* RESTORED LARGER SIZE */
+            /* MODIFIED: Reduced link size from 1.9rem to 1.7rem */
+            font-size: 1.7rem; 
             color : var(--main-color);
-            margin-left : 4rem; /* RESTORED LARGER SPACING */
+            /* MODIFIED: Reduced link margin from 4rem to 3rem */
+            margin-left : 3rem; 
             font-weight: 700;
             transition : 0.3s ease;
 
@@ -150,7 +154,8 @@ section {
         
         /* Standardized menu button ID */
         #menu-icon { 
-            font-size: 3.6rem; /* RESTORED LARGER SIZE */
+            /* MODIFIED: Reduced icon size from 3.6rem to 3rem */
+            font-size: 3rem; 
             color : var(--main-color);
             cursor : pointer;
             display : none; /* Hidden by default on desktop */
@@ -158,10 +163,12 @@ section {
 
         /* --- Theme Toggle Button Styling --- */
         #theme-toggle {
-            font-size: 2.4rem; /* RESTORED LARGER SIZE */
+            /* MODIFIED: Reduced icon size from 2.4rem to 2.2rem */
+            font-size: 2.2rem; 
             color: var(--main-color);
             cursor: pointer;
-            margin-left: 4rem; /* RESTORED LARGER SPACING */
+            /* MODIFIED: Reduced icon margin from 4rem to 3rem */
+            margin-left: 3rem; 
             transition: color 0.3s, transform 0.3s;
         }
         
